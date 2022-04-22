@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
                   const TextStyle(fontSize: 24, fontFamily: 'RobotoCondensed'),
             ),
       ),
-      home: const CategoreisScreen(),
+      home: const CategoriesScreen(),
     );
   }
 }

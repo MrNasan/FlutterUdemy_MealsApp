@@ -3,8 +3,8 @@ import 'package:meals_app/category_item.dart';
 
 import './dummy_data.dart';
 
-class CategoreisScreen extends StatelessWidget {
-  const CategoreisScreen({Key? key}) : super(key: key);
+class CategoriesScreen extends StatelessWidget {
+  const CategoriesScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
