@@ -1,17 +1,29 @@
 import 'package:flutter/material.dart';
+import 'package:meals_app/category_item.dart';
+
+import './dummy_data.dart';
 
 class CategoreisScreen extends StatelessWidget {
   const CategoreisScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return GridView(
-      children: const <Widget>[],
-      gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
-        maxCrossAxisExtent: 200,
-        childAspectRatio: 3 / 2,
-        crossAxisSpacing: 20,
-        mainAxisSpacing: 20,
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text(
+          'Delimeal',
+        ),
+      ),
+      body: GridView(
+        children: DUMMY_CATEGORIES
+            .map((catData) => CategoryItem(catData.title, catData.color))
+            .toList(),
+        gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
+          maxCrossAxisExtent: 200,
+          childAspectRatio: 3 / 2,
+          crossAxisSpacing: 20,
+          mainAxisSpacing: 20,
+        ),
       ),
     );
   }
